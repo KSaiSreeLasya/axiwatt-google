@@ -138,7 +138,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
           >
             <div className="mb-6 text-5xl">✓</div>
             <h3 className="text-2xl font-serif text-[#2c2825] mb-4">Consultation Requested</h3>
-            <p className="text-[#635e5a] font-light text-lg leading-relaxed max-w-lg mx-auto">
+            <p className="text-black font-light text-lg leading-relaxed max-w-lg mx-auto">
               {submitMessage.text}
             </p>
             <p className="text-[12px] text-[#b9975b] tracking-[0.1em] uppercase font-semibold mt-8">
