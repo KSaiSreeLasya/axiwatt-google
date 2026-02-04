@@ -60,7 +60,7 @@ export const Collection: React.FC = () => {
               <div className="w-full lg:w-2/5">
                 <p className="text-[13px] tracking-[0.3em] uppercase text-[#b9975b] mb-8 font-bold">Design Logic 0{idx + 1}</p>
                 <h3 className="text-4xl md:text-6xl font-serif text-[#2c2825] mb-10 leading-[1.15]">{item.title}</h3>
-                <p className="text-[#635e5a] font-light text-xl leading-relaxed mb-14">{item.desc}</p>
+                <p className="text-black font-light text-xl leading-relaxed mb-14">{item.desc}</p>
                 <div className="space-y-8">
                   {[
                     { label: "Engineering", val: item.material },
