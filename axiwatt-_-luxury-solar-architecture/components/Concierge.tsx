@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const Concierge: React.FC = () => {
@@ -10,7 +9,7 @@ export const Concierge: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-serif text-neutral-900 mb-8">
               White-Glove Delivery. <br />Absolute Discretion.
             </h2>
-            <p className="text-neutral-600 font-light mb-12 text-lg">
+            <p className="text-black font-light mb-12 text-lg">
               Our engagement begins at the architectural modeling stage and extends through the lifetime of the estate. No subcontractors, no compromises.
             </p>
             
