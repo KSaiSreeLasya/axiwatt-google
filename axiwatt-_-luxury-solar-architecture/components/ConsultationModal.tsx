@@ -258,7 +258,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
                 )}
               </motion.button>
               
-              <p className="text-[11px] text-[#635e5a] tracking-[0.1em] text-center max-w-sm font-light">
+              <p className="text-[11px] text-black tracking-[0.1em] text-center max-w-sm font-light">
                 By submitting, you acknowledge Axiwatt operates with strict confidentiality protocols and UHNW-grade security standards.
               </p>
             </motion.div>
