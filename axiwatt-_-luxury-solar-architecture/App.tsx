@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Navbar } from './components/Navbar';
@@ -11,6 +10,7 @@ import { Technology } from './components/Technology';
 import { Concierge } from './components/Concierge';
 import { Geography } from './components/Geography';
 import { ArchitectsPortal } from './components/ArchitectsPortal';
+import { Experience } from './components/Experience';
 import { Footer } from './components/Footer';
 import { ConsultationModal } from './components/ConsultationModal';
 
@@ -55,6 +55,7 @@ const App: React.FC = () => {
             <Technology />
             <Concierge />
             <Geography />
+            <Experience onOpenConsultation={() => setIsConsultationOpen(true)} />
             <ArchitectsPortal onOpenConsultation={() => setIsConsultationOpen(true)} />
           </>
         );
