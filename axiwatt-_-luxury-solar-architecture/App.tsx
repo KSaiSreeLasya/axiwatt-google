@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useMetaTags } from './hooks/useMetaTags';
+import { seoConfig } from './config/seoConfig';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { BrandStrip } from './components/BrandStrip';
