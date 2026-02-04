@@ -41,19 +41,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation, currentView,
         scrolled ? 'bg-white/95 backdrop-blur-xl py-4 shadow-sm border-b border-[#e8e4df]' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-screen-2xl mx-auto flex items-center justify-between">
+      <div className="max-w-screen-2xl mx-auto flex items-center justify-between gap-12">
         {/* Logo */}
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => handleNavClick('home')}
-          className="text-2xl md:text-3xl lg:text-4xl font-serif tracking-widest text-[#2c2825] cursor-pointer outline-none hover:text-[#b9975b] transition-colors duration-300"
+          className="text-2xl md:text-3xl lg:text-4xl font-serif tracking-widest text-[#2c2825] cursor-pointer outline-none hover:text-[#b9975b] transition-colors duration-300 flex-shrink-0"
         >
           AXIWATT
         </motion.button>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8 xl:gap-12 text-[11px] xl:text-[12px] tracking-[0.25em] uppercase font-semibold">
+        <div className="hidden lg:flex items-center gap-10 xl:gap-14 text-[11px] xl:text-[12px] tracking-[0.25em] uppercase font-semibold flex-1 justify-center">
           {navItems.map((item, idx) => (
             <motion.button
               key={item.view}
