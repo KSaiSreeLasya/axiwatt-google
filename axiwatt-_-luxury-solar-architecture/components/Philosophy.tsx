@@ -65,7 +65,7 @@ export const Philosophy: React.FC = () => {
               >
                 {pillar.title}
               </motion.h3>
-              <p className="text-[#635e5a] font-light text-lg leading-relaxed">
+              <p className="text-black font-light text-lg leading-relaxed">
                 {pillar.desc}
               </p>
             </motion.div>
