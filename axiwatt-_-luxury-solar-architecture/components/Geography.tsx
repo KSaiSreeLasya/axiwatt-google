@@ -71,7 +71,7 @@ export const Geography: React.FC = () => {
                   {loc.name}
                 </motion.h3>
                 
-                <p className="text-[#635e5a] font-light text-base leading-relaxed mb-8">
+                <p className="text-black font-light text-base leading-relaxed mb-8">
                   {loc.description}
                 </p>
                 
