@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -18,13 +17,13 @@ const products = [
   {
     title: "Luminous Glass Railings",
     narrative: "Safety barriers that double as energy harvesters, glowing softly with the stored energy of the day.",
-    img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1000",
+    img: "https://images.pexels.com/photos/7246057/pexels-photo-7246057.jpeg",
     cases: ["Terrace Safety", "Balcony Enclosures", "Bridge Walkways"]
   },
   {
     title: "Walkable Solar Tiles",
     narrative: "High-strength architectural tiles that generate power underfoot, designed for heavy traffic and refined aesthetics.",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000",
+    img: "https://images.pexels.com/photos/30440447/pexels-photo-30440447.jpeg",
     cases: ["Private Courtyards", "Sun Terraces", "Entry Plazas"]
   }
 ];
