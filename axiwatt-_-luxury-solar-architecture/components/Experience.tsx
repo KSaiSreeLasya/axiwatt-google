@@ -44,7 +44,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenConsultation }) =>
                 <h3 className="text-4xl md:text-5xl font-serif text-[#2c2825] mb-8 group-hover:text-[#b9975b] transition-colors duration-500">
                   Design Studio
                 </h3>
-                <p className="text-[#635e5a] font-light text-lg leading-relaxed mb-10">
+                <p className="text-black font-light text-lg leading-relaxed mb-10">
                   Located in the heart of Hyderabad, our private design studio showcases the full spectrum of Axiwatt's engineering and architectural capabilities. Experience live energy monitoring, material samples, case studies, and collaborative design sessions.
                 </p>
               </div>
@@ -102,7 +102,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenConsultation }) =>
                 <h3 className="text-4xl md:text-5xl font-serif text-[#2c2825] mb-8 group-hover:text-[#b9975b] transition-colors duration-500">
                   The Axiwatt App
                 </h3>
-                <p className="text-[#635e5a] font-light text-lg leading-relaxed mb-10">
+                <p className="text-black font-light text-lg leading-relaxed mb-10">
                   24/7 global monitoring of your estate's energy autonomy. Real-time energy flow visualization, predictive maintenance alerts, remote diagnostics, and autonomous system optimization—all built on privacy-first architecture.
                 </p>
               </div>
