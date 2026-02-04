@@ -30,12 +30,8 @@ const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>('home');
 
   // Update meta tags based on current view
-  useEffect(() => {
-    const metaConfig = seoConfig[currentView];
-    if (metaConfig) {
-      useMetaTags(metaConfig);
-    }
-  }, [currentView]);
+  const metaConfig = seoConfig[currentView];
+  useMetaTags(metaConfig);
 
   useEffect(() => {
     window.scrollTo(0, 0);
