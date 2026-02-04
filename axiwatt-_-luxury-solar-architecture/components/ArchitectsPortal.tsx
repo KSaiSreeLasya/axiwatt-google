@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ArchitectsPortalProps {
@@ -11,7 +10,7 @@ export const ArchitectsPortal: React.FC<ArchitectsPortalProps> = ({ onOpenConsul
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-serif text-neutral-900 mb-8">Co-Creating Sustainable Landmarks</h2>
-          <p className="text-neutral-600 text-lg font-light leading-relaxed mb-12">
+          <p className="text-black text-lg font-light leading-relaxed mb-12">
             We partner with architects and designers to integrate Net-Zero luxury directly into the building's DNA. 
             Gain access to our modeling tools, BIM objects, and technical consultation to ensure your vision is powered perfectly.
           </p>

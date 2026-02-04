@@ -39,7 +39,7 @@ export const Geography: React.FC = () => {
           transition={{ duration: 1 }}
           className="text-center mb-32"
         >
-          <p className="text-[12px] tracking-[0.5em] uppercase text-[#635e5a] mb-6 font-semibold">Local Presence</p>
+          <p className="text-[12px] tracking-[0.5em] uppercase text-black mb-6 font-semibold">Local Presence</p>
           <h2 className="text-5xl md:text-7xl font-serif text-[#2c2825]">Serving Hyderabad's Most Exclusive Enclaves</h2>
         </motion.div>
 
@@ -71,7 +71,7 @@ export const Geography: React.FC = () => {
                   {loc.name}
                 </motion.h3>
                 
-                <p className="text-[#635e5a] font-light text-base leading-relaxed mb-8">
+                <p className="text-black font-light text-base leading-relaxed mb-8">
                   {loc.description}
                 </p>
                 
@@ -82,7 +82,7 @@ export const Geography: React.FC = () => {
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       transition={{ delay: idx * 0.12 + (hIdx * 0.05), duration: 0.6 }}
-                      className="text-[11px] tracking-[0.1em] uppercase bg-white border border-[#e8e4df] px-4 py-2 text-[#635e5a] font-semibold group-hover:border-[#b9975b] group-hover:text-[#b9975b] transition-colors"
+                      className="text-[11px] tracking-[0.1em] uppercase bg-white border border-[#e8e4df] px-4 py-2 text-black font-semibold group-hover:border-[#b9975b] group-hover:text-[#b9975b] transition-colors"
                     >
                       {highlight}
                     </motion.span>
@@ -103,7 +103,7 @@ export const Geography: React.FC = () => {
         >
           <p className="text-[12px] tracking-[0.3em] uppercase text-[#b9975b] mb-6 font-bold">Service Coverage</p>
           <h3 className="text-3xl md:text-4xl font-serif text-[#2c2825] mb-6">Citywide Expertise</h3>
-          <p className="text-[#635e5a] max-w-2xl mx-auto font-light text-lg mb-12">
+          <p className="text-black max-w-2xl mx-auto font-light text-lg mb-12">
             With offices and installation crews across Hyderabad's premium enclaves, we provide local responsiveness with global standards.
           </p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-8">

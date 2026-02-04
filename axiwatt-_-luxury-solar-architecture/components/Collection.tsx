@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -34,7 +33,7 @@ export const Collection: React.FC = () => {
           transition={{ duration: 1.2 }}
           className="mb-32 text-center lg:text-left"
         >
-          <p className="text-[13px] tracking-[0.5em] uppercase text-[#635e5a] mb-8 font-bold">The Axiwatt Collection</p>
+          <p className="text-[13px] tracking-[0.5em] uppercase text-black mb-8 font-bold">The Axiwatt Collection</p>
           <h2 className="text-5xl md:text-8xl font-serif text-[#2c2825] max-w-5xl leading-[1.1]">Signature Solar Architecture</h2>
         </motion.div>
 
@@ -61,7 +60,7 @@ export const Collection: React.FC = () => {
               <div className="w-full lg:w-2/5">
                 <p className="text-[13px] tracking-[0.3em] uppercase text-[#b9975b] mb-8 font-bold">Design Logic 0{idx + 1}</p>
                 <h3 className="text-4xl md:text-6xl font-serif text-[#2c2825] mb-10 leading-[1.15]">{item.title}</h3>
-                <p className="text-[#635e5a] font-light text-xl leading-relaxed mb-14">{item.desc}</p>
+                <p className="text-black font-light text-xl leading-relaxed mb-14">{item.desc}</p>
                 <div className="space-y-8">
                   {[
                     { label: "Engineering", val: item.material },
@@ -72,7 +71,7 @@ export const Collection: React.FC = () => {
                       whileHover={{ x: 8 }}
                       className="flex items-center justify-between py-6 border-b border-[#e8e4df] transition-colors hover:border-[#b9975b]"
                     >
-                      <span className="text-[12px] tracking-[0.2em] uppercase text-[#635e5a] font-bold">{row.label}</span>
+                      <span className="text-[12px] tracking-[0.2em] uppercase text-black font-bold">{row.label}</span>
                       <span className="text-[13px] tracking-[0.05em] text-[#2c2825] font-semibold">{row.val}</span>
                     </motion.div>
                   ))}

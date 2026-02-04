@@ -16,7 +16,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenConsultation }) =>
           transition={{ duration: 1 }}
           className="text-center mb-32"
         >
-          <p className="text-[12px] tracking-[0.5em] uppercase text-[#635e5a] mb-6 font-semibold">The Axiwatt Experience</p>
+          <p className="text-[12px] tracking-[0.5em] uppercase text-black mb-6 font-semibold">The Axiwatt Experience</p>
           <h2 className="text-5xl md:text-7xl font-serif text-[#2c2825]">Immersive. Confidential. Tangible.</h2>
         </motion.div>
 
@@ -44,7 +44,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenConsultation }) =>
                 <h3 className="text-4xl md:text-5xl font-serif text-[#2c2825] mb-8 group-hover:text-[#b9975b] transition-colors duration-500">
                   Design Studio
                 </h3>
-                <p className="text-[#635e5a] font-light text-lg leading-relaxed mb-10">
+                <p className="text-black font-light text-lg leading-relaxed mb-10">
                   Located in the heart of Hyderabad, our private design studio showcases the full spectrum of Axiwatt's engineering and architectural capabilities. Experience live energy monitoring, material samples, case studies, and collaborative design sessions.
                 </p>
               </div>
@@ -61,7 +61,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenConsultation }) =>
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.1, duration: 0.8 }}
-                    className="flex items-start gap-4 text-[#635e5a]"
+                    className="flex items-start gap-4 text-black"
                   >
                     <span className="text-[#b9975b] font-serif text-xl mt-1">✦</span>
                     <span className="font-light text-base leading-relaxed">{feature}</span>
@@ -102,7 +102,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenConsultation }) =>
                 <h3 className="text-4xl md:text-5xl font-serif text-[#2c2825] mb-8 group-hover:text-[#b9975b] transition-colors duration-500">
                   The Axiwatt App
                 </h3>
-                <p className="text-[#635e5a] font-light text-lg leading-relaxed mb-10">
+                <p className="text-black font-light text-lg leading-relaxed mb-10">
                   24/7 global monitoring of your estate's energy autonomy. Real-time energy flow visualization, predictive maintenance alerts, remote diagnostics, and autonomous system optimization—all built on privacy-first architecture.
                 </p>
               </div>
@@ -119,7 +119,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenConsultation }) =>
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.1, duration: 0.8 }}
-                    className="flex items-start gap-4 text-[#635e5a]"
+                    className="flex items-start gap-4 text-black"
                   >
                     <span className="text-[#b9975b] font-serif text-xl mt-1">✦</span>
                     <span className="font-light text-base leading-relaxed">{feature}</span>
@@ -146,7 +146,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenConsultation }) =>
           transition={{ duration: 1, delay: 0.3 }}
           className="mt-40 pt-24 border-t border-[#e8e4df] text-center"
         >
-          <p className="text-[#635e5a] max-w-3xl mx-auto font-light text-xl leading-relaxed">
+          <p className="text-black max-w-3xl mx-auto font-light text-xl leading-relaxed">
             Whether you choose to visit our design studio or engage remotely through the Axiwatt App, every interaction is grounded in absolute discretion, technical transparency, and a commitment to your estate's 40-year legacy.
           </p>
         </motion.div>

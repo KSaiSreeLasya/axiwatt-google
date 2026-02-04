@@ -51,9 +51,9 @@ export const Technology: React.FC = () => {
           transition={{ duration: 1 }}
           className="text-center mb-32"
         >
-          <p className="text-[12px] tracking-[0.5em] uppercase text-[#635e5a] mb-6 font-semibold">Engineered Legacy</p>
+          <p className="text-[12px] tracking-[0.5em] uppercase text-black mb-6 font-semibold">Engineered Legacy</p>
           <h2 className="text-5xl md:text-7xl font-serif text-[#2c2825] mb-8">World-Class Systems. 40-Year Durability.</h2>
-          <p className="text-[#635e5a] max-w-3xl mx-auto font-light text-lg">
+          <p className="text-black max-w-3xl mx-auto font-light text-lg">
             Axiwatt partners exclusively with globally respected manufacturers to ensure performance, longevity, and reliability engineered for Hyderabad's climate.
           </p>
         </motion.div>
@@ -75,7 +75,7 @@ export const Technology: React.FC = () => {
               >
                 {item.title}
               </motion.h4>
-              <p className="text-[#635e5a] text-base font-light leading-relaxed mb-10 flex-grow">
+              <p className="text-black text-base font-light leading-relaxed mb-10 flex-grow">
                 {item.desc}
               </p>
 
@@ -91,7 +91,7 @@ export const Technology: React.FC = () => {
                     <p className="text-[12px] tracking-[0.2em] uppercase text-[#2c2825] font-semibold group-hover:text-[#b9975b] transition-colors">
                       {partner.name}
                     </p>
-                    <p className="text-[11px] text-[#635e5a] font-light">{partner.spec}</p>
+                    <p className="text-[11px] text-black font-light">{partner.spec}</p>
                   </motion.div>
                 ))}
               </div>
@@ -107,7 +107,7 @@ export const Technology: React.FC = () => {
           transition={{ delay: 0.5, duration: 1 }}
           className="mt-32 pt-20 border-t border-[#e8e4df] text-center"
         >
-          <p className="text-[12px] tracking-[0.3em] uppercase text-[#635e5a] mb-8 font-semibold">Verified Excellence</p>
+          <p className="text-[12px] tracking-[0.3em] uppercase text-black mb-8 font-semibold">Verified Excellence</p>
           <div className="flex flex-wrap justify-center gap-12 md:gap-16">
             {['LEED Certification', 'IGBC Standards', 'IEC 61215', 'UL 1703', '40-Year Warranty'].map((cert, idx) => (
               <motion.div

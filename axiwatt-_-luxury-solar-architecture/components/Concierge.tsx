@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const Concierge: React.FC = () => {
@@ -10,32 +9,32 @@ export const Concierge: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-serif text-neutral-900 mb-8">
               White-Glove Delivery. <br />Absolute Discretion.
             </h2>
-            <p className="text-neutral-600 font-light mb-12 text-lg">
+            <p className="text-black font-light mb-12 text-lg">
               Our engagement begins at the architectural modeling stage and extends through the lifetime of the estate. No subcontractors, no compromises.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
                 <h5 className="text-neutral-900 text-sm font-semibold mb-2">Design Integration</h5>
-                <p className="text-neutral-500 text-xs font-light leading-relaxed">
+                <p className="text-black text-xs font-light leading-relaxed">
                   Full BIM/Revit coordination with your architectural team from the conceptual phase.
                 </p>
               </div>
               <div>
                 <h5 className="text-neutral-900 text-sm font-semibold mb-2">Regulatory Stewardship</h5>
-                <p className="text-neutral-500 text-xs font-light leading-relaxed">
+                <p className="text-black text-xs font-light leading-relaxed">
                   Managing all GHMC and TERC approvals, ensuring your estate is fully compliant and grid-harmonized.
                 </p>
               </div>
               <div>
                 <h5 className="text-neutral-900 text-sm font-semibold mb-2">Invisible Maintenance</h5>
-                <p className="text-neutral-500 text-xs font-light leading-relaxed">
+                <p className="text-black text-xs font-light leading-relaxed">
                   24/7 predictive monitoring with silent AMC visits that respect the privacy of your residence.
                 </p>
               </div>
               <div>
                 <h5 className="text-neutral-900 text-sm font-semibold mb-2">Financial Lifecycle</h5>
-                <p className="text-neutral-500 text-xs font-light leading-relaxed">
+                <p className="text-black text-xs font-light leading-relaxed">
                   Comprehensive ROI modeling and asset value protection through certified LEED/IGBC alignment.
                 </p>
               </div>

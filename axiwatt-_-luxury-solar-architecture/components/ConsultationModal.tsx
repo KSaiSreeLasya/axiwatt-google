@@ -109,7 +109,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={onClose}
-          className="absolute top-8 right-8 text-[#635e5a] hover:text-[#2c2825] transition-colors"
+          className="absolute top-8 right-8 text-black hover:text-[#2c2825] transition-colors"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
@@ -124,7 +124,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-serif text-[#2c2825] mb-4">Request a Private Consultation</h2>
-          <p className="text-[#635e5a] font-light text-base">
+          <p className="text-black font-light text-base">
             Experience absolute discretion and architectural excellence. Our concierge team will contact you within 24 hours.
           </p>
         </motion.div>
@@ -138,7 +138,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
           >
             <div className="mb-6 text-5xl">✓</div>
             <h3 className="text-2xl font-serif text-[#2c2825] mb-4">Consultation Requested</h3>
-            <p className="text-[#635e5a] font-light text-lg leading-relaxed max-w-lg mx-auto">
+            <p className="text-black font-light text-lg leading-relaxed max-w-lg mx-auto">
               {submitMessage.text}
             </p>
             <p className="text-[12px] text-[#b9975b] tracking-[0.1em] uppercase font-semibold mt-8">
@@ -258,7 +258,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
                 )}
               </motion.button>
               
-              <p className="text-[11px] text-[#635e5a] tracking-[0.1em] text-center max-w-sm font-light">
+              <p className="text-[11px] text-black tracking-[0.1em] text-center max-w-sm font-light">
                 By submitting, you acknowledge Axiwatt operates with strict confidentiality protocols and UHNW-grade security standards.
               </p>
             </motion.div>

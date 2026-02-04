@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -25,7 +24,7 @@ export const BrandStrip: React.FC = () => {
             />
           </div>
           <div className="lg:max-w-3xl">
-            <p className="text-[#635e5a] leading-relaxed text-xl font-light">
+            <p className="text-black leading-relaxed text-xl font-light">
               Axiwatt is a vertically integrated collective operating at the intersection of architecture, construction, renewable energy, and advanced technology. 
               Backed by internal family-office entities and an exclusive architectural partnership, we control every layer of design and execution—eliminating fragmentation and delivering estates that are visually uncompromised and energetically autonomous.
             </p>
