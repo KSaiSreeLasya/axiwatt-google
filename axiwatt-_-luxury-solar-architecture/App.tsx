@@ -55,6 +55,7 @@ const App: React.FC = () => {
             <Technology />
             <Concierge />
             <Geography />
+            <Experience onOpenConsultation={() => setIsConsultationOpen(true)} />
             <ArchitectsPortal onOpenConsultation={() => setIsConsultationOpen(true)} />
           </>
         );
