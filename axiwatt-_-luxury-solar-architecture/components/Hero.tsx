@@ -49,16 +49,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-6xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
-          <motion.p variants={itemVariants} className="text-[13px] tracking-[0.6em] uppercase text-[#b9975b] mb-10 font-bold">
+          <motion.p variants={itemVariants} className="text-[12px] tracking-[0.7em] uppercase text-[#b9975b] mb-8 font-bold letter-spacing-wide">
             Architectural Energy Autonomy
           </motion.p>
-          <motion.h1 variants={itemVariants} className="text-6xl sm:text-7xl md:text-9xl font-serif text-[#2c2825] mb-12 leading-[1.02] tracking-tight">
-            Where Grandeur <br /> 
-            <span className="italic font-light opacity-90">Meets</span> Autonomy
+          <motion.h1 variants={itemVariants} className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif text-[#2c2825] mb-10 leading-[1.05] tracking-tighter">
+            Where Grandeur <br />
+            <span className="italic font-light opacity-85">Meets</span> <br />Autonomy
           </motion.h1>
-          <motion.p variants={itemVariants} className="text-black text-xl md:text-2xl font-light max-w-3xl mx-auto mb-16 leading-relaxed">
+          <motion.p variants={itemVariants} className="text-black text-lg md:text-xl lg:text-2xl font-light max-w-3xl mx-auto mb-16 leading-relaxed">
             Bespoke solar ecosystems for Hyderabad’s most distinguished residences—integrated invisibly into architecture, engineered for total independence.
           </motion.p>
           
