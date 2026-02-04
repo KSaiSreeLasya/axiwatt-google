@@ -82,7 +82,7 @@ export const Geography: React.FC = () => {
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       transition={{ delay: idx * 0.12 + (hIdx * 0.05), duration: 0.6 }}
-                      className="text-[11px] tracking-[0.1em] uppercase bg-white border border-[#e8e4df] px-4 py-2 text-[#635e5a] font-semibold group-hover:border-[#b9975b] group-hover:text-[#b9975b] transition-colors"
+                      className="text-[11px] tracking-[0.1em] uppercase bg-white border border-[#e8e4df] px-4 py-2 text-black font-semibold group-hover:border-[#b9975b] group-hover:text-[#b9975b] transition-colors"
                     >
                       {highlight}
                     </motion.span>
