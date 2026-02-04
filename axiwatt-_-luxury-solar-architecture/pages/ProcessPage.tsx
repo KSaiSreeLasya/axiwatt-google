@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useMetaTags } from '../hooks/useMetaTags';
+import { seoConfig } from '../config/seoConfig';
 
 const steps = [
   { 
