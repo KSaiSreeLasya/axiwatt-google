@@ -32,7 +32,7 @@ export const Philosophy: React.FC = () => {
         >
           <p className="text-[12px] tracking-[0.5em] uppercase text-black mb-6 font-semibold">Our Core Ethos</p>
           <h2 className="text-5xl md:text-7xl font-serif text-[#2c2825] mb-8">Beyond Utility. Beyond ROI.</h2>
-          <p className="text-[#635e5a] max-w-3xl mx-auto font-light text-xl leading-relaxed">
+          <p className="text-black max-w-3xl mx-auto font-light text-xl leading-relaxed">
             We view solar not as an addition, but as critical infrastructure. A long-term architectural asset designed for resilience, legacy, and endurance.
           </p>
         </motion.div>
