@@ -113,7 +113,7 @@ export const Geography: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 + (idx * 0.08), duration: 0.6 }}
-                className="px-6 py-3 border-2 border-[#b9975b] text-[12px] tracking-[0.1em] uppercase font-semibold text-[#b9975b] hover:bg-[#b9975b] hover:text-white transition-colors"
+                className="px-6 py-3 border-2 border-[#b9975b] text-[13px] tracking-[0.1em] uppercase font-semibold text-[#b9975b] hover:bg-[#b9975b] hover:text-white transition-colors"
               >
                 {service}
               </motion.div>
