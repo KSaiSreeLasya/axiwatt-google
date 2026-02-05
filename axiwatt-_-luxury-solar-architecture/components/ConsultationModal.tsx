@@ -64,9 +64,17 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
 
       // Send email notification to admin
       try {
-        const supabaseUrl = 'https://njdxufiyzwwmkcekbqbm.supabase.co';
+        // Use localhost for development, production URL for production
+        const supabaseUrl = import.meta.env.DEV
+          ? 'http://localhost:9999'
+          : 'https://njdxufiyzwwmkcekbqbm.supabase.co';
+
+        const functionPath = import.meta.env.DEV
+          ? '/send-consultation-email'
+          : '/functions/v1/send-consultation-email';
+
         const emailResponse = await fetch(
-          `${supabaseUrl}/functions/v1/send-consultation-email`,
+          `${supabaseUrl}${functionPath}`,
           {
             method: 'POST',
             headers: {
