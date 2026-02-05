@@ -51,6 +51,10 @@ const App: React.FC = () => {
         return <ProcessPage />;
       case 'partners':
         return <PartnersPage onOpenConsultation={() => setIsConsultationOpen(true)} />;
+      case 'privacy':
+        return <PrivacyPolicyPage />;
+      case 'terms':
+        return <TermsOfServicePage />;
       case 'home':
       default:
         return (
