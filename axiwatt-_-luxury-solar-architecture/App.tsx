@@ -25,7 +25,7 @@ import { PartnersPage } from './pages/PartnersPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
 
-export type View = 'home' | 'about' | 'products' | 'technology' | 'process' | 'partners' | 'privacy' | 'terms';
+export type View = 'home' | 'about' | 'products' | 'technology' | 'process' | 'partners' | 'privacy' | 'term';
 
 const App: React.FC = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
