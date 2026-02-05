@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { View } from '../App';
@@ -92,8 +91,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation, onNavigate }
             © 2024 AXIWATT Energy & Architecture. Private & Confidential.
           </div>
           <div className="flex gap-12 text-[10px] tracking-[0.2em] uppercase text-neutral-400">
-            <motion.a whileHover={{ y: -1 }} href="#" className="hover:text-neutral-900 transition-colors">Privacy Policy</motion.a>
-            <motion.a whileHover={{ y: -1 }} href="#" className="hover:text-neutral-900 transition-colors">Terms of Service</motion.a>
+            <motion.button whileHover={{ y: -1 }} onClick={() => onNavigate('privacy')} className="hover:text-neutral-900 transition-colors">Privacy Policy</motion.button>
+            <motion.button whileHover={{ y: -1 }} onClick={() => onNavigate('terms')} className="hover:text-neutral-900 transition-colors">Terms of Service</motion.button>
           </div>
         </motion.div>
       </div>
