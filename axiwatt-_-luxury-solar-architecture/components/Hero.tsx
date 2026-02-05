@@ -70,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               whileHover={{ scale: 1.05, boxShadow: "0 30px 60px rgba(0,0,0,0.3)" }}
               whileTap={{ scale: 0.95 }}
               onClick={onOpenConsultation}
-              className="px-12 py-6 bg-white text-[#2c2825] text-[12px] tracking-[0.3em] uppercase font-bold transition-all duration-500 shadow-xl hover:bg-[#d4af37]"
+              className="px-12 py-6 bg-white text-[#2c2825] text-[13px] tracking-[0.3em] uppercase font-bold transition-all duration-500 shadow-xl hover:bg-[#d4af37]"
             >
               Private Consultation
             </motion.button>
