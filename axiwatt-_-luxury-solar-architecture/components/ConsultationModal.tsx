@@ -209,13 +209,13 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
               transition={{ delay: 0.25, duration: 0.5 }}
               className="group"
             >
-              <textarea 
+              <textarea
                 name="objectives"
                 value={formData.objectives}
                 onChange={handleChange}
                 rows={4}
                 placeholder="Primary Objectives (Architecture, Independence, Retrofit, etc.)"
-                className="w-full bg-transparent border-b-2 border-[#e8e4df] py-4 focus:outline-none focus:border-[#b9975b] transition-colors text-[#2c2825] placeholder:text-[#dcd7d0] font-light resize-none"
+                className="w-full bg-transparent border-b-2 border-[#e8e4df] py-4 focus:outline-none focus:border-[#b9975b] transition-colors text-[#2c2825] placeholder:text-[#2c2825] font-light resize-none"
               />
             </motion.div>
 
