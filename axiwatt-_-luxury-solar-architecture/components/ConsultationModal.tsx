@@ -82,9 +82,10 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
         onClose();
       }, 3000);
     } catch (error) {
-      setSubmitMessage({ 
-        type: 'error', 
-        text: 'An error occurred. Please try again or email concierge@axiwatt.com' 
+      console.error('Submission error:', error);
+      setSubmitMessage({
+        type: 'error',
+        text: 'Unable to process your request. Please try again or email concierge@axiwatt.com'
       });
     } finally {
       setIsSubmitting(false);
