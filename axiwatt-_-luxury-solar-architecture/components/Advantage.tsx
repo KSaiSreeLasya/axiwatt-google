@@ -21,7 +21,7 @@ export const Advantage: React.FC = () => {
                   <span className="text-amber-600 font-serif text-xl">01</span>
                   The Problem with Fragmentation
                 </h4>
-                <p className="text-black font-light leading-relaxed pl-10 border-l border-neutral-200 group-hover:border-amber-600/40 transition-colors">
+                <p className="text-black font-light text-base leading-relaxed pl-10 border-l border-neutral-200 group-hover:border-amber-600/40 transition-colors">
                   Fragmented solar delivery leads to compromised aesthetics and technical gaps. We solve this by owning the entire ecosystem.
                 </p>
               </div>
