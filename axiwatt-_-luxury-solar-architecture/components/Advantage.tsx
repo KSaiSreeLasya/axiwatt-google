@@ -31,7 +31,7 @@ export const Advantage: React.FC = () => {
                   <span className="text-amber-600 font-serif text-xl">02</span>
                   Holistic Architectural Synergy
                 </h4>
-                <p className="text-black font-light leading-relaxed pl-10 border-l border-neutral-200 group-hover:border-amber-600/40 transition-colors">
+                <p className="text-black font-light text-base leading-relaxed pl-10 border-l border-neutral-200 group-hover:border-amber-600/40 transition-colors">
                   Axiwatt integrates architecture, civil engineering, MEP, and energy logic into a single streamlined workflow.
                 </p>
               </div>
