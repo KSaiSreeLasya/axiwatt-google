@@ -53,16 +53,18 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
         return;
       }
 
-      // Here you would typically send data to your backend
-      // For now, we'll simulate a successful submission
-      // In production, this would integrate with your backend API and Gemini
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Save consultation request to Supabase
+      await saveConsultationRequest({
+        full_name: formData.fullName,
+        email: formData.email,
+        estate_location: formData.estateLocation,
+        objectives: formData.objectives,
+        phone: formData.phone
+      });
 
-      setSubmitMessage({ 
-        type: 'success', 
-        text: 'Thank you! Our concierge team will contact you within 24 hours at ' + formData.email 
+      setSubmitMessage({
+        type: 'success',
+        text: 'Thank you! Our concierge team will contact you within 24 hours at ' + formData.email
       });
 
       // Reset form after short delay
