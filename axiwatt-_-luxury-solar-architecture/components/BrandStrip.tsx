@@ -16,7 +16,9 @@ export const BrandStrip: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-serif text-[#2c2825] mb-6">
               One Vision.
               <br />
-              Total Control. No Compromise.
+              Total Control.
+              <br />
+              No Compromise.
             </h2>
             <motion.div 
               initial={{ width: 0 }}
