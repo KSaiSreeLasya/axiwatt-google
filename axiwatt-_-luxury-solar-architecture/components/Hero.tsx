@@ -61,7 +61,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               Where Grandeur <br />
               <span className="italic font-light opacity-90">Meets</span> <br />Autonomy
             </motion.h1>
-            <motion.p variants={itemVariants} className="text-white text-base md:text-lg lg:text-xl font-light max-w-2xl mb-12 leading-relaxed drop-shadow">
+            <motion.p variants={itemVariants} className="text-white text-lg md:text-xl lg:text-2xl font-light max-w-2xl mb-12 leading-relaxed drop-shadow">
               Bespoke solar ecosystems for Hyderabad's most distinguished residences—integrated invisibly into architecture, engineered for total independence.
             </motion.p>
             
