@@ -5,7 +5,7 @@ const locations = [
   {
     name: "Kokapet & Financial District",
     description: "Precision solar integration for sky-villas, penthouses, and high-rise luxury residences with seamless facade integration.",
-    img: "https://images.unsplash.com/photo-1486325212027-8081e3e4e16e?auto=format&fit=crop&q=80&w=800",
+    img: "https://images.pexels.com/photos/35847096/pexels-photo-35847096.jpeg?auto=compress&cs=tinysrgb&w=800",
     highlights: ["Sky-villas", "Penthouses", "High-rise luxury", "Facade integration"]
   },
   {
@@ -17,7 +17,7 @@ const locations = [
   {
     name: "Narsingi & Puppalguda",
     description: "Comprehensive solar ecosystems for premium gated villa communities, serving multiple residences with coordinated infrastructure.",
-    img: "https://images.unsplash.com/photo-1549887534-7c1e0f88dc96?auto=format&fit=crop&q=80&w=800",
+    img: "https://images.pexels.com/photos/34823930/pexels-photo-34823930.jpeg?auto=compress&cs=tinysrgb&w=800",
     highlights: ["Gated communities", "Multiple villas", "Shared infrastructure", "Community coordination"]
   },
   {
