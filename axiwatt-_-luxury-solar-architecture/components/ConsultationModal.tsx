@@ -75,7 +75,6 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
 
         const emailResponse = await fetch(
           `${supabaseUrl}${functionPath}`,
-        
           {
             method: 'POST',
             headers: {
