@@ -109,7 +109,7 @@ export const Technology: React.FC = () => {
         >
           <p className="text-[12px] tracking-[0.3em] uppercase text-black mb-8 font-semibold">Verified Excellence</p>
           <div className="flex flex-wrap justify-center gap-12 md:gap-16">
-            {['LEED Certification', 'IGBC Standards', 'IEC 61215', 'UL 1703', '40-Year Warranty'].map((cert, idx) => (
+            {['LEED Certification', 'IGBC Standards', 'IEC 61215', 'UL 1703', '30-Year Warranty'].map((cert, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0 }}
