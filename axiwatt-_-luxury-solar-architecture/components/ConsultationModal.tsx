@@ -66,12 +66,10 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
       try {
         // Use localhost for development, production URL for production
         const supabaseUrl = import.meta.env.DEV
-          ? 'http://localhost:9999'
+          ? 'http://localhost:54321'
           : 'https://njdxufiyzwwmkcekbqbm.supabase.co';
 
-        const functionPath = import.meta.env.DEV
-          ? '/send-consultation-email'
-          : '/functions/v1/send-consultation-email';
+        const functionPath = '/functions/v1/send-consultation-email';
 
         const emailResponse = await fetch(
           `${supabaseUrl}${functionPath}`,

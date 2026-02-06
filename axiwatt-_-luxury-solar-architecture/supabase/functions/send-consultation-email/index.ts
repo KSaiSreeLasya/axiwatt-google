@@ -12,7 +12,12 @@ const SENDGRID_API_KEY = Deno.env.get("SENDGRID_API_KEY");
 const SENDGRID_FROM_EMAIL = Deno.env.get("SENDGRID_FROM_EMAIL") || "noreply@axiwatt.com";
 const ADMIN_EMAIL = "kottesaisreelasya@gmail.com";
 
+console.log("send-consultation-email function loaded");
+console.log("SENDGRID_API_KEY is set:", !!SENDGRID_API_KEY);
+console.log("SENDGRID_FROM_EMAIL:", SENDGRID_FROM_EMAIL);
+
 serve(async (req) => {
+  console.log("Received request:", req.method);
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {
@@ -41,12 +46,15 @@ serve(async (req) => {
     }
 
     if (!SENDGRID_API_KEY) {
-      console.error("SENDGRID_API_KEY is not set");
+      console.error("ERROR: SENDGRID_API_KEY is not set");
       return new Response(
         JSON.stringify({ error: "Email service not configured" }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
+
+    console.log("Processing consultation request from:", data.email);
+    console.log("Sending to admin email:", ADMIN_EMAIL);
 
     // Create email content
     const emailBody = `
@@ -69,6 +77,7 @@ Please follow up with the client at your earliest convenience.
     `;
 
     // Send email via SendGrid
+    console.log("Calling SendGrid API...");
     const response = await fetch("https://api.sendgrid.com/v3/mail/send", {
       method: "POST",
       headers: {
@@ -93,11 +102,15 @@ Please follow up with the client at your earliest convenience.
       }),
     });
 
+    console.log("SendGrid response status:", response.status);
+
     if (!response.ok) {
       const error = await response.text();
-      console.error("SendGrid error:", error);
-      throw new Error(`SendGrid API error: ${response.status}`);
+      console.error("SendGrid error response:", error, "Status:", response.status);
+      throw new Error(`SendGrid API error: ${response.status} - ${error}`);
     }
+
+    console.log("Email sent successfully to:", ADMIN_EMAIL);
 
     return new Response(
       JSON.stringify({ success: true, message: "Email sent successfully" }),
