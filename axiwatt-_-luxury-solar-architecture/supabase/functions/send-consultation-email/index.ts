@@ -124,10 +124,7 @@ Please follow up with the client at your earliest convenience.
       JSON.stringify({ success: true, message: "Email sent successfully" }),
       {
         status: 200,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
+        headers: corsHeaders,
       }
     );
   } catch (error) {
@@ -139,10 +136,7 @@ Please follow up with the client at your earliest convenience.
       }),
       {
         status: 500,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
+        headers: corsHeaders,
       }
     );
   }
