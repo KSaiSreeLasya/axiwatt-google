@@ -16,22 +16,30 @@ console.log("send-consultation-email function loaded");
 console.log("SENDGRID_API_KEY is set:", !!SENDGRID_API_KEY);
 console.log("SENDGRID_FROM_EMAIL:", SENDGRID_FROM_EMAIL);
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
+  "Content-Type": "application/json",
+};
+
 serve(async (req) => {
   console.log("Received request:", req.method);
+  console.log("Request headers:", req.headers);
+
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
+      headers: corsHeaders,
     });
   }
 
   if (req.method !== "POST") {
-    return new Response("Method not allowed", { status: 405 });
+    return new Response(JSON.stringify({ error: "Method not allowed" }), {
+      status: 405,
+      headers: corsHeaders
+    });
   }
 
   try {
