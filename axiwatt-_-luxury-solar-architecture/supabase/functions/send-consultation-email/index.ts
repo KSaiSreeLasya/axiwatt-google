@@ -46,12 +46,15 @@ serve(async (req) => {
     }
 
     if (!SENDGRID_API_KEY) {
-      console.error("SENDGRID_API_KEY is not set");
+      console.error("ERROR: SENDGRID_API_KEY is not set");
       return new Response(
         JSON.stringify({ error: "Email service not configured" }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
+
+    console.log("Processing consultation request from:", data.email);
+    console.log("Sending to admin email:", ADMIN_EMAIL);
 
     // Create email content
     const emailBody = `
