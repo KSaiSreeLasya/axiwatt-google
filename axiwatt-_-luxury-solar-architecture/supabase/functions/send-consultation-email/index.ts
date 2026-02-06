@@ -12,7 +12,12 @@ const SENDGRID_API_KEY = Deno.env.get("SENDGRID_API_KEY");
 const SENDGRID_FROM_EMAIL = Deno.env.get("SENDGRID_FROM_EMAIL") || "noreply@axiwatt.com";
 const ADMIN_EMAIL = "kottesaisreelasya@gmail.com";
 
+console.log("send-consultation-email function loaded");
+console.log("SENDGRID_API_KEY is set:", !!SENDGRID_API_KEY);
+console.log("SENDGRID_FROM_EMAIL:", SENDGRID_FROM_EMAIL);
+
 serve(async (req) => {
+  console.log("Received request:", req.method);
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {
