@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- Logo mark -->
+  <g fill="#0F2437">
+    <!-- A with arrow -->
+    <path d="M 80 80 L 120 40 L 140 80 L 130 80 L 125 90 L 155 90 L 150 100 L 85 100 Z"/>
+    <!-- X -->
+    <path d="M 160 40 L 185 65 L 210 40 L 225 55 L 200 80 L 225 105 L 210 120 L 185 95 L 160 120 L 145 105 L 170 80 L 145 55 Z"/>
+    <!-- W arrow -->
+    <path d="M 235 60 L 255 40 L 275 60 L 270 65 L 280 100 L 270 90 L 260 110 L 250 90 L 240 100 L 245 65 Z"/>
+  </g>
+  
+  <!-- Text "AXIWATT" -->
+  <text x="50" y="160" font-family="Arial, sans-serif" font-size="48" font-weight="bold" letter-spacing="8" fill="#0F2437">AXIWATT</text>
+</svg>
