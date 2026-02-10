@@ -1,0 +1,48 @@
+# Robots.txt for Axiwatt - Luxury Solar Architecture
+# Last updated: 2026-02-05
+
+# Allow all robots to crawl the site
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /api/private/
+Allow: /api/public/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Specific rules for other major search engines
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Crawl Delay Settings (in seconds)
+Crawl-delay: 1
+Request-rate: 1/10
+
+# Sitemap location
+Sitemap: https://axiwatt.com/sitemap.xml
+
+# Additional sitemaps if needed
+Sitemap: https://axiwatt.com/products-sitemap.xml
+Sitemap: https://axiwatt.com/images-sitemap.xml
+
+# Avoid crawling certain user agents
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Contact information (optional)
+# Website: https://axiwatt.com
+# Email: concierge@axiwatt.com

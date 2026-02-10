@@ -1,0 +1,7 @@
+{
+  "name": "AXIWATT | Luxury Solar Architecture",
+  "description": "Bespoke solar ecosystems for Hyderabad’s most distinguished residences, integrated invisibly into architecture and engineered for absolute energy autonomy.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
