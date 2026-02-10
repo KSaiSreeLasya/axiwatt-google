@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { saveConsultationRequest } from '../config/supabaseClient';
 
 interface ConsultationModalProps {
@@ -62,37 +63,38 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ onClose })
         phone: formData.phone
       });
 
-      // Send email notification to admin
+      // Send email notification (EmailJS)
       try {
-        // Use localhost for development, production URL for production
-        const supabaseUrl = import.meta.env.DEV
-          ? 'http://localhost:54321'
-          : 'https://njdxufiyzwwmkcekbqbm.supabase.co';
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
 
-        const functionPath = '/functions/v1/send-consultation-email';
+        if (!serviceId || !templateId || !publicKey) {
+          console.warn(
+            'EmailJS is not configured (missing VITE_EMAILJS_SERVICE_ID / VITE_EMAILJS_TEMPLATE_ID / VITE_EMAILJS_PUBLIC_KEY).'
+          );
+        } else {
+          // These keys must match your EmailJS template variables ({{name}}, {{email}}, {{message}}, {{time}})
+          const message = [
+            `Estate Location: ${formData.estateLocation}`,
+            `Phone: ${formData.phone || 'Not provided'}`,
+            `Objectives: ${formData.objectives || 'Not specified'}`
+          ].join('\n');
 
-        const emailResponse = await fetch(
-          `${supabaseUrl}${functionPath}`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              full_name: formData.fullName,
+          await emailjs.send(
+            serviceId,
+            templateId,
+            {
+              name: formData.fullName,
               email: formData.email,
-              estate_location: formData.estateLocation,
-              objectives: formData.objectives,
-              phone: formData.phone
-            })
-          }
-        );
-
-        if (!emailResponse.ok) {
-          console.warn('Email notification failed, but consultation was saved');
+              message,
+              time: new Date().toISOString()
+            },
+            { publicKey }
+          );
         }
       } catch (emailError) {
-        console.warn('Failed to send email notification:', emailError);
+        console.warn('EmailJS failed to send, but consultation was saved:', emailError);
         // Don't fail the submission if email sending fails
       }
 

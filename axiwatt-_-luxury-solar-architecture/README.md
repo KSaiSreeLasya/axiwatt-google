@@ -15,6 +15,12 @@ View your app in AI Studio: https://ai.studio/apps/drive/10-Spz_fT9pYpJzeFICFRgy
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Create `.env.local` (see `env.example`) and set any required keys
+   - EmailJS:
+     - `VITE_EMAILJS_SERVICE_ID`
+     - `VITE_EMAILJS_TEMPLATE_ID`
+     - `VITE_EMAILJS_PUBLIC_KEY`
+   - (Optional) Gemini:
+     - `GEMINI_API_KEY`
 3. Run the app:
    `npm run dev`

@@ -8,13 +8,14 @@ interface ConsultationData {
   phone?: string;
 }
 
-const SENDGRID_API_KEY = Deno.env.get("SENDGRID_API_KEY");
-const SENDGRID_FROM_EMAIL = Deno.env.get("SENDGRID_FROM_EMAIL") || "noreply@axiwatt.com";
-const ADMIN_EMAIL = "kottesaisreelasya@gmail.com";
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const RESEND_FROM_EMAIL = Deno.env.get("RESEND_FROM_EMAIL") || "noreply@axiwatt.com";
+const ADMIN_EMAIL = Deno.env.get("ADMIN_EMAIL") || "kottesaisreelasya@gmail.com";
 
 console.log("send-consultation-email function loaded");
-console.log("SENDGRID_API_KEY is set:", !!SENDGRID_API_KEY);
-console.log("SENDGRID_FROM_EMAIL:", SENDGRID_FROM_EMAIL);
+console.log("RESEND_API_KEY is set:", !!RESEND_API_KEY);
+console.log("RESEND_FROM_EMAIL:", RESEND_FROM_EMAIL);
+console.log("ADMIN_EMAIL:", ADMIN_EMAIL);
 
 serve(async (req) => {
   console.log("Received request:", req.method);
@@ -45,8 +46,8 @@ serve(async (req) => {
       );
     }
 
-    if (!SENDGRID_API_KEY) {
-      console.error("ERROR: SENDGRID_API_KEY is not set");
+    if (!RESEND_API_KEY) {
+      console.error("ERROR: RESEND_API_KEY is not set");
       return new Response(
         JSON.stringify({ error: "Email service not configured" }),
         { status: 500, headers: { "Content-Type": "application/json" } }
@@ -76,38 +77,29 @@ Submitted at: ${new Date().toISOString()}
 Please follow up with the client at your earliest convenience.
     `;
 
-    // Send email via SendGrid
-    console.log("Calling SendGrid API...");
-    const response = await fetch("https://api.sendgrid.com/v3/mail/send", {
+    // Send email via Resend
+    console.log("Calling Resend API...");
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${SENDGRID_API_KEY}`,
+        Authorization: `Bearer ${RESEND_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        personalizations: [
-          {
-            to: [{ email: ADMIN_EMAIL }],
-            subject: `New Consultation Request from ${data.full_name}`,
-          },
-        ],
-        from: { email: SENDGRID_FROM_EMAIL },
-        content: [
-          {
-            type: "text/plain",
-            value: emailBody,
-          },
-        ],
-        reply_to: { email: data.email },
+        from: RESEND_FROM_EMAIL,
+        to: [ADMIN_EMAIL],
+        subject: `New Consultation Request from ${data.full_name}`,
+        text: emailBody,
+        reply_to: data.email,
       }),
     });
 
-    console.log("SendGrid response status:", response.status);
+    console.log("Resend response status:", response.status);
 
     if (!response.ok) {
       const error = await response.text();
-      console.error("SendGrid error response:", error, "Status:", response.status);
-      throw new Error(`SendGrid API error: ${response.status} - ${error}`);
+      console.error("Resend error response:", error, "Status:", response.status);
+      throw new Error(`Resend API error: ${response.status} - ${error}`);
     }
 
     console.log("Email sent successfully to:", ADMIN_EMAIL);
