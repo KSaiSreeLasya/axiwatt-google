@@ -18,7 +18,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation, onNavigate }
             viewport={{ once: true }}
             className="max-w-md"
           >
-            <button onClick={() => onNavigate('home')} className="text-4xl font-serif text-neutral-900 mb-8 tracking-wider outline-none hover:opacity-70 transition-opacity">AXIWATT</button>
+            <button onClick={() => onNavigate('home')} className="mb-8 outline-none hover:opacity-70 transition-opacity h-16">
+              <img src="/axiwatt-logo.svg" alt="AXIWATT" className="h-full w-auto object-contain" />
+            </button>
             <p className="text-neutral-500 font-light leading-relaxed">
               Hyderabad’s premier collective for luxury energy architecture. Engineered for autonomy, designed for distinction.
             </p>
