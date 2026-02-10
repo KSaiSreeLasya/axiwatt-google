@@ -1,0 +1,9 @@
+# Robots.txt for AxiWatt
+# Last updated: 2026-02-10
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://axiwatt.com/sitemap.xml
+

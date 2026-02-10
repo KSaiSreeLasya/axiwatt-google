@@ -1,0 +1,34 @@
+{
+  "name": "AxiWatt – Luxury Solar Architecture",
+  "short_name": "AxiWatt",
+  "description": "Luxury solar architecture and sustainable energy solutions.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fdfcfb",
+  "theme_color": "#b9975b",
+  "icons": [
+    {
+      "src": "/favicon-64X64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-192X192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512X512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
+

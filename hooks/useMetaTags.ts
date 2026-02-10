@@ -7,7 +7,10 @@ export interface MetaTagConfig {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  ogUrl?: string;
   twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
   canonicalUrl?: string;
 }
 
@@ -69,6 +72,17 @@ export const useMetaTags = (config: MetaTagConfig) => {
       ogImage.setAttribute('content', config.ogImage);
     }
 
+    // Update or create og:url
+    if (config.ogUrl) {
+      let ogUrl = document.querySelector('meta[property="og:url"]');
+      if (!ogUrl) {
+        ogUrl = document.createElement('meta');
+        ogUrl.setAttribute('property', 'og:url');
+        document.head.appendChild(ogUrl);
+      }
+      ogUrl.setAttribute('content', config.ogUrl);
+    }
+
     // Update or create twitter:card
     if (config.twitterCard) {
       let twitterCard = document.querySelector('meta[name="twitter:card"]');
@@ -78,6 +92,28 @@ export const useMetaTags = (config: MetaTagConfig) => {
         document.head.appendChild(twitterCard);
       }
       twitterCard.setAttribute('content', config.twitterCard);
+    }
+
+    // Update or create twitter:title
+    if (config.twitterTitle) {
+      let twitterTitle = document.querySelector('meta[name="twitter:title"]');
+      if (!twitterTitle) {
+        twitterTitle = document.createElement('meta');
+        twitterTitle.setAttribute('name', 'twitter:title');
+        document.head.appendChild(twitterTitle);
+      }
+      twitterTitle.setAttribute('content', config.twitterTitle);
+    }
+
+    // Update or create twitter:description
+    if (config.twitterDescription) {
+      let twitterDesc = document.querySelector('meta[name="twitter:description"]');
+      if (!twitterDesc) {
+        twitterDesc = document.createElement('meta');
+        twitterDesc.setAttribute('name', 'twitter:description');
+        document.head.appendChild(twitterDesc);
+      }
+      twitterDesc.setAttribute('content', config.twitterDescription);
     }
 
     // Update or create canonical link
