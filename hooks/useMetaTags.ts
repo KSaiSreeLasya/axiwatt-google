@@ -7,10 +7,14 @@ export interface MetaTagConfig {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  ogImageWidth?: string;
+  ogImageHeight?: string;
   ogUrl?: string;
+  ogType?: string;
   twitterCard?: string;
   twitterTitle?: string;
   twitterDescription?: string;
+  twitterImage?: string;
   canonicalUrl?: string;
 }
 
@@ -72,6 +76,39 @@ export const useMetaTags = (config: MetaTagConfig) => {
       ogImage.setAttribute('content', config.ogImage);
     }
 
+    // Update or create og:image:width
+    if (config.ogImageWidth) {
+      let ogImageWidth = document.querySelector('meta[property="og:image:width"]');
+      if (!ogImageWidth) {
+        ogImageWidth = document.createElement('meta');
+        ogImageWidth.setAttribute('property', 'og:image:width');
+        document.head.appendChild(ogImageWidth);
+      }
+      ogImageWidth.setAttribute('content', config.ogImageWidth);
+    }
+
+    // Update or create og:image:height
+    if (config.ogImageHeight) {
+      let ogImageHeight = document.querySelector('meta[property="og:image:height"]');
+      if (!ogImageHeight) {
+        ogImageHeight = document.createElement('meta');
+        ogImageHeight.setAttribute('property', 'og:image:height');
+        document.head.appendChild(ogImageHeight);
+      }
+      ogImageHeight.setAttribute('content', config.ogImageHeight);
+    }
+
+    // Update or create og:type
+    if (config.ogType) {
+      let ogType = document.querySelector('meta[property="og:type"]');
+      if (!ogType) {
+        ogType = document.createElement('meta');
+        ogType.setAttribute('property', 'og:type');
+        document.head.appendChild(ogType);
+      }
+      ogType.setAttribute('content', config.ogType);
+    }
+
     // Update or create og:url
     if (config.ogUrl) {
       let ogUrl = document.querySelector('meta[property="og:url"]');
@@ -114,6 +151,17 @@ export const useMetaTags = (config: MetaTagConfig) => {
         document.head.appendChild(twitterDesc);
       }
       twitterDesc.setAttribute('content', config.twitterDescription);
+    }
+
+    // Update or create twitter:image
+    if (config.twitterImage) {
+      let twitterImage = document.querySelector('meta[name="twitter:image"]');
+      if (!twitterImage) {
+        twitterImage = document.createElement('meta');
+        twitterImage.setAttribute('name', 'twitter:image');
+        document.head.appendChild(twitterImage);
+      }
+      twitterImage.setAttribute('content', config.twitterImage);
     }
 
     // Update or create canonical link
