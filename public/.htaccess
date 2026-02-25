@@ -1,0 +1,54 @@
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/xml image/svg+xml
+</IfModule>
+
+# Enable Expires caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images
+  ExpiresByType image/jpeg "access 1 year"
+  ExpiresByType image/gif "access 1 year"
+  ExpiresByType image/png "access 1 year"
+  ExpiresByType image/svg+xml "access 1 year"
+  ExpiresByType image/x-icon "access 1 year"
+  
+  # CSS and JavaScript
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType application/javascript "access 1 month"
+  ExpiresByType text/javascript "access 1 month"
+  
+  # XML files
+  ExpiresByType application/xml "access 1 day"
+  ExpiresByType text/xml "access 1 day"
+  
+  # Manifest
+  ExpiresByType application/manifest+json "access 1 day"
+  
+  # HTML
+  ExpiresByType text/html "access 1 hour"
+</IfModule>
+
+# Set proper MIME types
+<IfModule mod_mime.c>
+  AddType application/xml .xml
+  AddType application/manifest+json .webmanifest
+  AddCharset utf-8 .xml .webmanifest
+</IfModule>
+
+# URL Rewriting for SPA
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Don't rewrite existing files or directories
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Rewrite all requests to index.html for client-side routing
+  RewriteRule ^(.*)$ index.html [QSA,L]
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
