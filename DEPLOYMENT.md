@@ -20,7 +20,43 @@ npm run preview
 
 ## Platform-Specific Deployments
 
-### Netlify (Recommended)
+### Render (Recommended)
+1. Sign up at [render.com](https://render.com)
+2. Connect your GitHub repository:
+   - Click "New +" → "Web Service"
+   - Select your GitHub repository
+   - Name your service (e.g., "axiwatt-solar")
+
+3. Configure:
+   - **Runtime**: Node
+   - **Build Command**: `npm ci && npm run build`
+   - **Start Command**: `npm start`
+   - **Node Version**: 22.22.0
+   - **Plan**: Free or Pro (depending on needs)
+
+4. Environment Variables (if needed):
+   - Add `VITE_GEMINI_API_KEY` in Environment section
+   - Add `NODE_ENV=production`
+
+5. Deploy:
+   - Render will automatically build and deploy when you push to GitHub
+   - Your site will be available at: `https://your-service-name.onrender.com`
+
+**Key Features:**
+- Custom Express server for proper static file serving
+- Automatic HTTPS
+- Environment variable management
+- Automatic deployments on push
+- Free tier available
+
+**Static Files Served:**
+- robots.txt
+- sitemap.xml
+- site.webmanifest
+- All favicon files
+- All assets with proper cache headers
+
+### Netlify
 1. Connect your GitHub repository to Netlify
 2. The `netlify.toml` file is already configured with:
    - Build command: `npm run build`
@@ -125,12 +161,31 @@ The following files are in the `public/` folder and will be served from the root
 
 ## Verification After Deployment
 
-### Check Static Files
+### For Render Deployments
+1. Check your deployed site URL (e.g., https://your-service-name.onrender.com)
+2. Check static files are accessible:
+   ```bash
+   # These should return 200 status and proper content type
+   curl -I https://your-service-name.onrender.com/robots.txt
+   curl -I https://your-service-name.onrender.com/sitemap.xml
+   curl -I https://your-service-name.onrender.com/site.webmanifest
+   ```
+
+3. View the response headers to verify:
+   ```bash
+   curl -i https://your-service-name.onrender.com/robots.txt
+   # Should show: Content-Type: text/plain
+
+   curl -i https://your-service-name.onrender.com/sitemap.xml
+   # Should show: Content-Type: application/xml
+   ```
+
+### Check Static Files (All Platforms)
 ```bash
 # These should return 200 status
-curl -I https://axiwatt.com/robots.txt
-curl -I https://axiwatt.com/sitemap.xml
-curl -I https://axiwatt.com/site.webmanifest
+curl -I https://your-domain.com/robots.txt
+curl -I https://your-domain.com/sitemap.xml
+curl -I https://your-domain.com/site.webmanifest
 ```
 
 ### Check SEO
