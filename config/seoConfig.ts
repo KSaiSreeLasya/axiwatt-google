@@ -4,10 +4,10 @@ export const baseUrl = 'https://axiwatt.com';
 export const seoConfig = {
   home: {
     title: 'Axiwatt – Energy Autonomy Solutions',
-    description: 'Transform your private estate with sustainable power autonomy. Axiwatt integrates architecture and renewable energy for intelligent, off-grid living.',
-    keywords: 'luxury solar architecture, solar energy systems, renewable energy, solar pergolas, solar glass facades, sustainable architecture, high-end solar solutions, energy autonomy, private estates',
+    description: 'Axiwatt delivers bespoke solar architecture and energy autonomy systems for Hyderabad\'s most distinguished private estates. Integrated renewable energy solutions for total independence.',
+    keywords: 'axiwatt, axiwatt solar, energy autonomy, luxury solar architecture, solar energy systems, renewable energy, solar pergolas, solar glass facades, sustainable architecture, high-end solar solutions, private estates, Hyderabad',
     ogTitle: 'Axiwatt – Energy Autonomy Solutions',
-    ogDescription: 'Transform your private estate with sustainable power autonomy. Axiwatt integrates architecture and renewable energy for intelligent, off-grid living.',
+    ogDescription: 'Axiwatt delivers bespoke solar architecture and energy autonomy systems for Hyderabad\'s most distinguished private estates.',
     ogImage: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200',
     ogImageWidth: '1200',
     ogImageHeight: '630',
@@ -20,9 +20,9 @@ export const seoConfig = {
     canonicalUrl: baseUrl
   },
   about: {
-    title: 'Luxury Energy Autonomy for Estates | Axiwatt',
-    description: 'Discover bespoke energy autonomy systems for premium properties. Axiwatt blends smart design with renewable power for sustainable living.',
-    keywords: 'solar architecture firm, renewable energy company, luxury estate development, sustainable architecture, energy governance, private collective',
+    title: 'About Axiwatt – Energy Autonomy Specialists',
+    description: 'Discover Axiwatt\'s bespoke energy autonomy systems for premium properties. Axiwatt blends intelligent solar architecture with renewable power for sustainable living.',
+    keywords: 'axiwatt about, axiwatt team, solar architecture firm, renewable energy company, luxury estate development, sustainable architecture, energy governance, axiwatt hyderabad',
     ogTitle: 'Luxury Energy Autonomy for Estates | Axiwatt',
     ogDescription: 'Discover bespoke energy autonomy systems for premium properties. Axiwatt blends smart design with renewable power for sustainable living.',
     ogImage: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200',
@@ -37,9 +37,9 @@ export const seoConfig = {
     canonicalUrl: `${baseUrl}/about`
   },
   products: {
-    title: 'Axiwatt – Solar & Renewable Energy Architecture',
-    description: 'Leading energy autonomy provider offering solar architecture and intelligent energy systems tailored to distinguished residences.',
-    keywords: 'solar pergolas, solar glass facades, solar railings, walkable solar tiles, building-integrated photovoltaics, BIPV, bioclimatic pergolas',
+    title: 'Axiwatt Products – Solar Architecture & BIPV Solutions',
+    description: 'Axiwatt products include solar pergolas, solar glass facades, and building-integrated photovoltaics. Premium solar architecture solutions for luxury estates.',
+    keywords: 'axiwatt products, solar pergolas, solar glass facades, solar railings, walkable solar tiles, building-integrated photovoltaics, BIPV, bioclimatic pergolas, axiwatt solutions',
     ogTitle: 'Axiwatt – Solar & Renewable Energy Architecture',
     ogDescription: 'Leading energy autonomy provider offering solar architecture and intelligent energy systems tailored to distinguished residences.',
     ogImage: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1200',
@@ -54,9 +54,9 @@ export const seoConfig = {
     canonicalUrl: `${baseUrl}/products`
   },
   technology: {
-    title: 'Smart Energy-Independent Architecture by Axiwatt',
-    description: 'Achieve complete energy independence with Axiwatt\'s intelligent renewable energy solutions for private estates.',
-    keywords: 'solar technology, energy storage, EV charging, solar modules, battery systems, renewable energy management, Axiwatt OS, intelligent energy systems',
+    title: 'Axiwatt Technology – Smart Energy Management Systems',
+    description: 'Axiwatt technology enables complete energy independence with intelligent renewable energy solutions. Features Axiwatt OS, energy storage, EV charging, and smart management.',
+    keywords: 'axiwatt technology, axiwatt os, solar technology, energy storage, EV charging, solar modules, battery systems, renewable energy management, intelligent energy systems, axiwatt smart',
     ogTitle: 'Smart Energy-Independent Architecture by Axiwatt',
     ogDescription: 'Achieve complete energy independence with Axiwatt\'s intelligent renewable energy solutions for private estates.',
     ogImage: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200',
@@ -71,9 +71,9 @@ export const seoConfig = {
     canonicalUrl: `${baseUrl}/technology`
   },
   process: {
-    title: 'Renewable Energy Architecture Services | Axiwatt',
-    description: 'Build energy efficient and autonomous living spaces with Axiwatt\'s comprehensive renewable system designs.',
-    keywords: 'architects, designers, solar integration, BIM tools, architectural collaboration, sustainable design, integrated solar architecture',
+    title: 'Axiwatt Process – Solar Architecture Design Services',
+    description: 'Axiwatt process delivers comprehensive renewable energy system designs for architects and designers. Integrated solar architecture and BIM collaboration tools.',
+    keywords: 'axiwatt process, axiwatt services, solar architecture services, architects, designers, solar integration, BIM tools, architectural collaboration, sustainable design, integrated solar',
     ogTitle: 'Renewable Energy Architecture Services | Axiwatt',
     ogDescription: 'Build energy efficient and autonomous living spaces with Axiwatt\'s comprehensive renewable system designs.',
     ogImage: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200',
@@ -88,9 +88,9 @@ export const seoConfig = {
     canonicalUrl: `${baseUrl}/process`
   },
   partners: {
-    title: 'Axiwatt – Intelligent Solar Architecture Experts',
-    description: 'Bespoke solar architecture and sustainability solutions designed for energy-independent estates.',
-    keywords: 'concierge services, energy management, lifecycle management, private services, regulatory stewardship, energy consulting, maintenance',
+    title: 'Axiwatt Partners – Concierge & Energy Management',
+    description: 'Axiwatt partners program offers concierge services and lifecycle energy management for your estate. Complete regulatory stewardship and maintenance support.',
+    keywords: 'axiwatt partners, axiwatt concierge, concierge services, energy management, lifecycle management, private services, regulatory stewardship, energy consulting, maintenance',
     ogTitle: 'Axiwatt – Intelligent Solar Architecture Experts',
     ogDescription: 'Bespoke solar architecture and sustainability solutions designed for energy-independent estates.',
     ogImage: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200',

@@ -58,11 +58,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               
             </motion.p>
             <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-[1.1] tracking-tighter drop-shadow-lg">
-              Where Grandeur <br />
+              Axiwatt: Where Grandeur <br />
               <span className="italic font-light opacity-90">Meets</span> <br />Autonomy
             </motion.h1>
             <motion.p variants={itemVariants} className="text-white text-lg md:text-xl lg:text-2xl font-light max-w-2xl mb-12 leading-relaxed drop-shadow">
-              Bespoke solar ecosystems for Hyderabad's most distinguished residences—integrated invisibly into architecture, engineered for total independence.
+              Axiwatt delivers bespoke solar ecosystems for Hyderabad's most distinguished residences—integrated invisibly into architecture, engineered for total independence.
             </motion.p>
             
             <motion.button
