@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
             className="max-w-3xl"
           >
             <motion.p variants={itemVariants} className="text-[13px] tracking-[0.7em] uppercase text-[#d4af37] mb-6 font-bold">
-              Architectural Energy Autonomy
+              
             </motion.p>
             <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-[1.1] tracking-tighter drop-shadow-lg">
               Where Grandeur <br />
